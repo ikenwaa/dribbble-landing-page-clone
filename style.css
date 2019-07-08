@@ -157,7 +157,7 @@ body{
   display: flex;
   flex-flow: row wrap;
   margin: 0 5%;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 10px;
 }
 
@@ -165,10 +165,10 @@ body{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 55%;
+  width: 50%;
   border: 1px solid blue;
   height: 510px;
-  margin-top: 10%;
+  margin-top: 8%;
   justify-content: center;
   box-shadow: 0 3px 3px;
 }
@@ -191,21 +191,22 @@ body{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 35%;
-  margin-top: 10%;
-  margin-left: -20px;
+  width: 40%;
+  margin-top: 8%;
+  margin-right: 5%;
+  justify-content: space-evenly;
 }
 
 .game-genres>div{
   width: 200px;
-  height: 250px;
+  height: 245px;
   border: 1px solid red;
-  margin: 0 10px;
+  margin: 0;
   box-shadow: 0 5px 5px;
 }
 
 .game-genres>div:nth-of-type(1){
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .game-genres>div:nth-of-type(2){
