@@ -1,54 +1,15 @@
-/* .flex_container{
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  flex-direction: row;
-}
-
-.flex_container>div{
-  width: 300px;
-  height: 300px;
-  border: 1px solid blue;
-  background-color: rgb(165, 162, 162);
-  margin-bottom: 10px;
-}
-
-.flex_container>div:nth-child(1){
-  width: 30%;
-  border: 1px solid red;
-}
-
-.flex_container>div:nth-child(2){
-  width: 60%;
-  border: 1px solid green;
-}
-
-section{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  width: 100%;
-}
-
-section>div{
-  width: 300px;
-  height: 300px;
-  background-color: rgb(100, 150, 123);
-  margin-bottom: 10px;
-  margin-right: 10px;
-} */
-
 /* ------- JamKey Landing Page Clone -------- */
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: none;
 }
 
 body{
   font-family: 'Montserrat', sans-serif;
-  overflow: auto
+  overflow-x: hidden;
 }
 
 .nav-section{
@@ -60,7 +21,7 @@ body{
   justify-content: space-around;
   padding: 7px;
   z-index: 2;
-  background-color: #b3b3b348;
+  background-color: rgb(243, 240, 240);
 }
 .logo{
   display: inline-flex;
@@ -70,12 +31,12 @@ body{
 
 .logo h2{
   font-size: 28px;
-  color: #09baf0;
+  color: #ff9068;
   font-weight: bolder;
 }
 
 .logo span{
-  color: #095af0;
+  color: #ff4b1f;
 }
 
 .fa-xbox{
@@ -83,7 +44,7 @@ body{
   align-items: center;
   margin-right: 7px;
   margin-top: 5px;
-  color: #09baf0;
+  color: #ff4b1f;
   font-size: 28px;
 }
 
@@ -96,46 +57,25 @@ body{
   flex-flow: row wrap;
   border-radius: 50px;
   border: none;
+  font-size: 20px;
+  align-items: center;
 }
 
 input{
   width: 550px;
   background-color: rgb(212, 214, 212);
   border-radius: 50px;
-  text-align: left;
-  height: 50px;
+  text-align: center;
+  height: 40px;
   border: none;
   padding: 3px;
   font-size: 16px;
 }
-input:focus{
+.input:focus{
   border: none;
+  box-shadow: none;
+  outline: red;
 }
-
-/* .input i{
-  display: inline-flex;
-  justify-content: space-between;
-}
-
-#searchbar{
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
-  border: 1px solid gray;
-  height: 40px;
-  border-right: #ffffff;
-}
-
-.fa-search{
-  display: flex;
-  align-items: center;
-  border: 1px solid gray;
-  height: 40px;
-  width: 30px;
-  margin-left: -100px;
-  border-left: #a83131;
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
-} */
 
 .login{
   align-items: flex-end;
@@ -158,18 +98,18 @@ input:focus{
 }
 
 .signup{
-  margin: 0 10px;
+  margin: 0 2px;
   width: 110px;
   height: 40px;
   border-radius: 50px;
-  border: 2px solid grey;
+  border: 1px solid grey;
 }
 
 /* ----- Body ----- */
 
 #container{
   position: relative;
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-flow: row wrap;
   margin: 0 5%;
@@ -178,21 +118,25 @@ input:focus{
 }
 
 .container{
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: row; */
   width: 55%;
-  border: 1px solid blue;
   height: 510px;
   margin-top: 8%;
   justify-content: center;
-  box-shadow: 0 3px 3px;
+  box-shadow: 0 5px 8px;
+  background-image: linear-gradient(rgba(85, 85, 85, 0.37), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/325153/pexels-photo-325153.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-size: cover;
+  background-position: center;
 }
 .side-container{
   width: 70%;
   display: block;
   height: 300px;
   margin-top: 18%;
+  margin-left: 10%;
+  color: white;
 }
 .side-container>p{
   font-size: 28px;
@@ -222,17 +166,35 @@ input:focus{
 .game-genres>div{
   width: 200px;
   height: 245px;
-  border: 1px solid red;
   margin: 0;
   box-shadow: 0 5px 5px;
 }
 
 .game-genres>div:nth-of-type(1){
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  background-image: linear-gradient(rgba(85, 85, 85, 0.37), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/1445238/pexels-photo-1445238.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-size: cover;
+  background-position: center;
 }
 
 .game-genres>div:nth-of-type(2){
+  background-image: linear-gradient(rgba(85, 85, 85, 0.37), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/2520829/pexels-photo-2520829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   margin-bottom: 10px;
+  background-size: cover;
+  background-position: center;
+}
+
+.game-genres>div:nth-of-type(3){
+  background-image: linear-gradient(rgba(85, 85, 85, 0.37), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/2106216/pexels-photo-2106216.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-size: cover;
+  background-position: center;
+}
+
+.game-genres>div:nth-of-type(4){
+  /* margin-bottom: 10px; */
+  background-image: linear-gradient(rgba(85, 85, 85, 0.37), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/1174597/pexels-photo-1174597.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-size: cover;
+  background-position: center;
 }
 
 .genre-text>.text{
@@ -242,4 +204,99 @@ input:focus{
 }
 .genre-text{
   margin-left: 5%;
+}
+
+/* ------ Mid Section ------ */
+.our-products{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width: 100%;
+  height: 30px;
+  margin: 1% 2%;
+}
+.buttons{
+  margin-left: -8%;
+  display: inline-flex;
+  align-items: center;
+  width: 25%;
+  border-radius: 50px;
+}
+
+.our-products>div{
+  margin-bottom: 30px;
+}
+
+button{
+  width: 140px;
+  height: 40px;
+  border-radius: 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  background: #ff4b1f;  /* fallback for old browsers */
+  background: linear-gradient(to right, #ff9068, #ff4b1f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.our_products>h1{
+  /* display: flex;
+  justify-content: flex-start;
+  flex-flow: row wrap; */
+  width: 100%;
+  margin-left: 8%;
+  margin-top: 15px;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.range{
+  display: inline-flex;
+  justify-content: space-evenly;
+}
+
+.range>p{
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* ------ Products Section ------ */
+.products-section{
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  width: 100%;
+  margin-top: 3%;
+}
+
+.products-section>div{
+  width: 250px;
+  margin: 5px;
+  padding: 5px;
+  height: 330px;
+  border: 1px solid red;
+}
+
+.product-card>div{
+  width: 230px;
+  height: 230px;
+  margin: 0 8px 0 4px;
+  border: none;
+  border-radius: 8px;
+}
+
+.card-image{
+  background-image: url('https://images.pexels.com/photos/163036/mario-luigi-yoschi-figures-163036.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-size: cover;
+  background-position: center;
+  max-width: 230px; 
+  max-height: 230px;
+}
+
+.products>button{
+  margin: 1% 48%;
+}
+
+.products{
+  width: 100%;
 }
